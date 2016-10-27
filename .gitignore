@@ -1,0 +1,7 @@
+.*.swp
+.DS_Store
+*.pyc
+peda-*.txt
+core
+.gdb_history
+pro.egg-info/
