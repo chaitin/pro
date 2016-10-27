@@ -1,19 +1,22 @@
-#   PRO:    PROgramming ROP like a PRO
+# PRO: PROgramming ROP like a PRO
 
 This is a crappy tool used in our private PS4 jailbreak. Since some version, the internal browser is compiled WITHOUT jit support, and sys\_jitshm\_xxx seems to be disabled for unprivileged process. We have to write the kernel exploitation in ROP, like what has been done in HENKaku jailbreak.
 
-##  Build
+## Build
+
 ```shell
 pip install git+https://github.com/chaitin/pro
 ```
 
 If you have modified the `pro.g4` file, use the following commands to
 generate new lexer and parser.
+
 ```shell
 cd pro/parse && antlr4 -no-listener -visitor -Dlanguage=Python2 pro.g4
 ```
 
-##  Examples
+## Examples
+
 ```javascript
 toy {
 	{% include "gadgets.pro" %}
@@ -37,10 +40,12 @@ toy {
 
 ```
 
-##  Usage
+## Usage
+
 A BIG TODO. Just try and learn by yourself.
 
-##  Quick Guide
+## Quick Guide
+
 All expressions should be evaluated during compilation, Const/Func should
 be initialized in declaration.
 
