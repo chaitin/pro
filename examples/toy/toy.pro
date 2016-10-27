@@ -11,9 +11,6 @@ toy {
 	{% for i in range(3): %}
 		dup2(fd, {{i}});
 	{% endfor %}
-	// system("/bin/sh");
-	array buf[0x100];
-	read(fd, buf, 0x100);
-	printf("%s", buf);
+	system("/bin/sh");
 	exit(1);
 }

