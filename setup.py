@@ -8,7 +8,7 @@ setup(
     name='pro',
     version='1.0',
     description='PROgramming ROP like a PRO',
-    packages=['pro'],
+    packages=['pro', 'pro.parse'],
     install_requires=[
         'jinja2',
         'antlr4-python2-runtime',
